@@ -15,7 +15,7 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv_main.tex      # 👈 your main file name here
+          root_file: cv-llt.tex      # 👈 your main file name here
           latexmk_use_xelatex: true   # good for Unicode and modern fonts
 
       - name: Move PDF to outputs/
@@ -26,5 +26,5 @@ jobs:
       - name: Upload compiled PDF
         uses: actions/upload-artifact@v3
         with:
-          name: cv-pdf
+          name: cv-llt.tex
           path: outputs/
